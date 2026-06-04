@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<!-- Landing Page: O Imperador Corporativo: Pacotes B2B de Marmitas para Empresas -->
+<!-- Template: Delivery: #fef4cc + #780605 + #e5a02d -->
+<!-- Criado por: Carlos Canvas | Agência Imperador | 2026-06-04 -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pacote Corporativo: O Imperador Delivery | Marmitas para Empresas em Uberlândia</title>
+  <meta name="description" content="Alimentação para sua equipe sem burocracia. O Imperador Delivery entrega marmitas todo dia na sua empresa em Uberlândia. Mais barato que o vale-refeição.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --creme: #fef4cc;
+      --vermelho: #780605;
+      --dourado: #e5a02d;
+      --marrom: #493221;
+      --marrom-med: #7d6d5f;
+      --branco: #ffffff;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--creme);
+      color: var(--marrom);
+      line-height: 1.6;
+    }
+
+    /* ========== NAV ========== */
+    nav {
+      background: var(--vermelho);
+      padding: 16px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--creme);
+      letter-spacing: 0.5px;
+    }
+
+    .nav-logo img {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .nav-logo span { color: var(--dourado); }
+
+    .nav-cta {
+      background: var(--dourado);
+      color: var(--marrom);
+      padding: 10px 24px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .nav-cta:hover { opacity: 0.85; }
+
+    /* ========== HERO ========== */
+    .hero {
+      background: var(--vermelho);
+      padding: 80px 5% 100px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: var(--creme);
+      clip-path: ellipse(55% 100% at 50% 100%);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(229,160,45,0.2);
+      border: 1px solid var(--dourado);
+      color: var(--dourado);
+      padding: 6px 20px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 900;
+      color: var(--creme);
+      line-height: 1.15;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--dourado);
+    }
+
+    .hero p {
+      font-size: clamp(16px, 2vw, 20px);
+      color: rgba(254,244,204,0.85);
+      max-width: 600px;
+      margin: 0 auto 40px;
+      font-weight: 400;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      background: var(--dourado);
+      color: var(--marrom);
+      padding: 18px 48px;
+      border-radius: 100px;
+      font-size: 18px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .hero-cta:hover { transform: translateY(-2px); opacity: 0.9; }
+
+    .hero-sub {
+      margin-top: 16px;
+      font-size: 14px;
+      color: rgba(254,244,204,0.6);
+    }
+
+    /* ========== BENEFÍCIOS ========== */
+    .beneficios {
+      padding: 80px 5%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-eyebrow {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--dourado);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 3.5vw, 40px);
+      font-weight: 900;
+      color: var(--vermelho);
+      margin-bottom: 48px;
+      line-height: 1.2;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .benefit-card {
+      background: var(--branco);
+      border-radius: 20px;
+      padding: 32px;
+      border-left: 5px solid var(--dourado);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(120,6,5,0.1);
+    }
+
+    .benefit-icon {
+      font-size: 36px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .benefit-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--vermelho);
+      margin-bottom: 8px;
+    }
+
+    .benefit-desc {
+      font-size: 15px;
+      color: var(--marrom-med);
+      line-height: 1.6;
+    }
+
+    /* ========== PACOTES ========== */
+    .pacotes {
+      background: var(--vermelho);
+      padding: 80px 5%;
+    }
+
+    .pacotes .section-eyebrow { color: var(--dourado); }
+    .pacotes .section-title { color: var(--creme); text-align: center; }
+
+    .pacotes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .pacote-card {
+      background: rgba(254,244,204,0.08);
+      border: 1px solid rgba(229,160,45,0.3);
+      border-radius: 20px;
+      padding: 36px 28px;
+      text-align: center;
+      position: relative;
+      transition: background 0.2s;
+    }
+
+    .pacote-card.destaque {
+      background: rgba(229,160,45,0.15);
+      border-color: var(--dourado);
+    }
+
+    .pacote-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--dourado);
+      color: var(--marrom);
+      padding: 4px 16px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+
+    .pacote-name {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--creme);
+      margin-bottom: 8px;
+    }
+
+    .pacote-funcionarios {
+      font-size: 14px;
+      color: rgba(254,244,204,0.6);
+      margin-bottom: 24px;
+    }
+
+    .pacote-preco-label {
+      font-size: 13px;
+      color: var(--dourado);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .pacote-preco {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      font-weight: 900;
+      color: var(--creme);
+      margin: 4px 0 2px;
+    }
+
+    .pacote-preco-sub {
+      font-size: 13px;
+      color: rgba(254,244,204,0.5);
+    }
+
+    .pacote-economia {
+      margin-top: 20px;
+      background: rgba(229,160,45,0.15);
+      border-radius: 10px;
+      padding: 10px 16px;
+      font-size: 14px;
+      color: var(--dourado);
+      font-weight: 600;
+    }
+
+    /* ========== CALCULADORA ========== */
+    .calculadora {
+      padding: 80px 5%;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .calc-box {
+      background: var(--branco);
+      border-radius: 24px;
+      padding: 48px;
+      border: 2px solid rgba(229,160,45,0.3);
+      box-shadow: 0 4px 40px rgba(120,6,5,0.08);
+    }
+
+    .calc-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--vermelho);
+      margin-bottom: 8px;
+    }
+
+    .calc-desc {
+      font-size: 15px;
+      color: var(--marrom-med);
+      margin-bottom: 32px;
+    }
+
+    .calc-input-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .calc-label {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--marrom);
+    }
+
+    .calc-input {
+      width: 100px;
+      padding: 12px 16px;
+      border: 2px solid rgba(120,6,5,0.2);
+      border-radius: 12px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--vermelho);
+      text-align: center;
+      background: var(--creme);
+    }
+
+    .calc-input:focus {
+      outline: none;
+      border-color: var(--vermelho);
+    }
+
+    .calc-result {
+      background: var(--creme);
+      border-radius: 16px;
+      padding: 24px;
+      display: none;
+    }
+
+    .calc-result.visible { display: block; }
+
+    .calc-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(120,6,5,0.1);
+      font-size: 15px;
+    }
+
+    .calc-row:last-child { border-bottom: none; }
+    .calc-row.total { font-weight: 800; font-size: 18px; color: var(--vermelho); }
+    .calc-row.economia { color: #2a7a3e; font-weight: 700; }
+
+    /* ========== FORMULÁRIO ========== */
+    .formulario {
+      background: var(--vermelho);
+      padding: 80px 5%;
+      text-align: center;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .formulario .section-eyebrow { color: var(--dourado); text-align: center; }
+    .formulario .section-title { color: var(--creme); text-align: center; margin-bottom: 12px; }
+
+    .form-subtitle {
+      font-size: 16px;
+      color: rgba(254,244,204,0.7);
+      margin-bottom: 40px;
+    }
+
+    .form-box {
+      background: var(--creme);
+      border-radius: 24px;
+      padding: 48px 40px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--marrom);
+      margin-bottom: 8px;
+    }
+
+    .form-input, .form-select {
+      width: 100%;
+      padding: 14px 18px;
+      border: 2px solid rgba(120,6,5,0.15);
+      border-radius: 12px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      color: var(--marrom);
+      background: var(--branco);
+      transition: border-color 0.2s;
+    }
+
+    .form-input:focus, .form-select:focus {
+      outline: none;
+      border-color: var(--vermelho);
+    }
+
+    .form-select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23780605' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 18px;
+      background: var(--vermelho);
+      color: var(--creme);
+      border: none;
+      border-radius: 100px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 17px;
+      font-weight: 800;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .form-submit:hover {
+      background: #5a0404;
+      transform: translateY(-1px);
+    }
+
+    .form-privacy {
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--marrom-med);
+      text-align: center;
+    }
+
+    /* ========== COMO FUNCIONA ========== */
+    .como-funciona {
+      padding: 80px 5%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .step {
+      text-align: center;
+      padding: 24px 16px;
+    }
+
+    .step-number {
+      width: 56px;
+      height: 56px;
+      background: var(--vermelho);
+      color: var(--creme);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 900;
+      margin: 0 auto 16px;
+    }
+
+    .step-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--vermelho);
+      margin-bottom: 8px;
+    }
+
+    .step-desc {
+      font-size: 14px;
+      color: var(--marrom-med);
+    }
+
+    /* ========== PROVA SOCIAL ========== */
+    .prova-social {
+      background: var(--vermelho);
+      padding: 60px 5%;
+      text-align: center;
+    }
+
+    .prova-numeros {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .numero-item { text-align: center; }
+
+    .numero-valor {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 900;
+      color: var(--dourado);
+      display: block;
+    }
+
+    .numero-label {
+      font-size: 15px;
+      color: rgba(254,244,204,0.7);
+    }
+
+    /* ========== FAQ ========== */
+    .faq {
+      padding: 80px 5%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(120,6,5,0.1);
+      padding: 24px 0;
+    }
+
+    .faq-question {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--vermelho);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-answer {
+      margin-top: 12px;
+      font-size: 15px;
+      color: var(--marrom-med);
+      line-height: 1.7;
+    }
+
+    /* ========== CTA FINAL ========== */
+    .cta-final {
+      background: linear-gradient(135deg, var(--vermelho), #5a0404);
+      padding: 100px 5%;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-final::before {
+      content: '👑';
+      position: absolute;
+      font-size: 300px;
+      opacity: 0.04;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .cta-final h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 900;
+      color: var(--creme);
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .cta-final p {
+      font-size: 18px;
+      color: rgba(254,244,204,0.7);
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .cta-final-btn {
+      display: inline-block;
+      background: var(--dourado);
+      color: var(--marrom);
+      padding: 20px 56px;
+      border-radius: 100px;
+      font-size: 18px;
+      font-weight: 800;
+      text-decoration: none;
+      position: relative;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .cta-final-btn:hover { transform: translateY(-3px); opacity: 0.9; }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: var(--marrom);
+      padding: 40px 5%;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--creme);
+      margin-bottom: 12px;
+    }
+
+    .footer-logo span { color: var(--dourado); }
+
+    footer p {
+      font-size: 14px;
+      color: rgba(254,244,204,0.5);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 768px) {
+      .form-box { padding: 32px 24px; }
+      .calc-box { padding: 32px 20px; }
+      .prova-numeros { gap: 28px; }
+      .numero-valor { font-size: 36px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVEGAÇÃO ===== -->
+  <nav>
+    <div class="nav-logo">
+      <!-- SUBSTITUIR src pelo caminho real do logotipo do Imperador Delivery -->
+      <img src="assets/logo-imperador-delivery.png" alt="O Imperador Delivery" onerror="this.style.display='none'">
+      <span style="color: var(--creme);">👑 O <span>Imperador</span> Delivery</span>
+    </div>
+    <a href="#formulario" class="nav-cta">Solicitar Proposta</a>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-badge">Pacote Corporativo • Uberlândia, MG</div>
+    <h1>Alimentação para sua equipe: <em>sem complicação,</em> sem burocracia.</h1>
+    <p>O Imperador entrega marmitas quentinhas todo dia na sua empresa. Mais prático que o vale-refeição. Mais barato também.</p>
+    <a href="#formulario" class="hero-cta">→ Solicitar degustação gratuita</a>
+    <p class="hero-sub">Sem compromisso • Sem custo na degustação • Resposta em menos de 15 minutos</p>
+  </section>
+
+  <!-- ===== PROVA SOCIAL (NÚMEROS) ===== -->
+  <section class="prova-social" style="background: var(--marrom); padding: 48px 5%;">
+    <div class="prova-numeros">
+      <div class="numero-item">
+        <span class="numero-valor">4.9★</span>
+        <span class="numero-label">Avaliação no iFood</span>
+      </div>
+      <div class="numero-item">
+        <span class="numero-valor">&lt;35min</span>
+        <span class="numero-label">Tempo médio de entrega</span>
+      </div>
+      <div class="numero-item">
+        <span class="numero-valor">Diário</span>
+        <span class="numero-label">Ingredientes frescos do dia</span>
+      </div>
+      <div class="numero-item">
+        <span class="numero-valor">Semanal</span>
+        <span class="numero-label">Cardápio novo toda semana</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFÍCIOS ===== -->
+  <section class="beneficios">
+    <p class="section-eyebrow">✦ Por que escolher o Imperador</p>
+    <h2 class="section-title">Tudo que sua empresa precisa.<br>Nada do que não precisa.</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <span class="benefit-icon">🚚</span>
+        <div class="benefit-title">Entrega diária no seu endereço</div>
+        <p class="benefit-desc">Marmitas quentinhas entregues toda manhã, direto na empresa. Sem filas, sem deslocamento, sem perda de tempo.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">📋</span>
+        <div class="benefit-title">Cardápio variado toda semana</div>
+        <p class="benefit-desc">Rotativo semanal: seus funcionários não comem o mesmo prato no mesmo dia. Feito com ingredientes frescos do dia.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">💳</span>
+        <div class="benefit-title">Pagamento mensal único</div>
+        <p class="benefit-desc">Uma nota fiscal, um pagamento. Sem cartões individuais, sem relatórios complicados, sem taxas escondidas.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">💰</span>
+        <div class="benefit-title">Até 28% mais barato que o VR</div>
+        <p class="benefit-desc">Compare: o vale-refeição médio em Uberlândia custa R$550-990/mês por funcionário. Nosso pacote começa em R$394/mês.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">💬</span>
+        <div class="benefit-title">Atendimento direto no WhatsApp</div>
+        <p class="benefit-desc">Fale diretamente com a Giulia, nossa especialista em atendimento corporativo. Resposta em menos de 15 minutos.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">✅</span>
+        <div class="benefit-title">Sem fidelidade no primeiro mês</div>
+        <p class="benefit-desc">Experimente por um mês sem comprometimento. Se sua equipe não aprovar, não há cobrança de multa ou fidelidade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PACOTES ===== -->
+  <section class="pacotes">
+    <p class="section-eyebrow" style="text-align: center; display: block;">✦ Nossos pacotes</p>
+    <h2 class="section-title">Escolha o plano certo para a sua empresa</h2>
+    <div class="pacotes-grid">
+
+      <div class="pacote-card">
+        <div class="pacote-name">Essencial</div>
+        <div class="pacote-funcionarios">5 a 9 funcionários</div>
+        <div class="pacote-preco-label">Preço por marmita</div>
+        <div class="pacote-preco">R$21,90</div>
+        <div class="pacote-preco-sub">≈ R$482/mês por funcionário</div>
+        <div class="pacote-economia">Economia vs. VR: ~12%</div>
+      </div>
+
+      <div class="pacote-card destaque">
+        <div class="pacote-badge">Mais popular</div>
+        <div class="pacote-name">Empresarial</div>
+        <div class="pacote-funcionarios">10 a 19 funcionários</div>
+        <div class="pacote-preco-label">Preço por marmita</div>
+        <div class="pacote-preco">R$19,90</div>
+        <div class="pacote-preco-sub">≈ R$438/mês por funcionário</div>
+        <div class="pacote-economia">Economia vs. VR: ~20%</div>
+      </div>
+
+      <div class="pacote-card">
+        <div class="pacote-name">Corporativo</div>
+        <div class="pacote-funcionarios">20+ funcionários</div>
+        <div class="pacote-preco-label">Preço por marmita</div>
+        <div class="pacote-preco">R$17,90</div>
+        <div class="pacote-preco-sub">≈ R$394/mês por funcionário</div>
+        <div class="pacote-economia">Economia vs. VR: ~28%</div>
+      </div>
+
+    </div>
+    <p style="text-align: center; margin-top: 28px; color: rgba(254,244,204,0.6); font-size: 14px;">
+      Preços baseados em 22 dias úteis/mês. Consulte-nos para projetos especiais com cardápio personalizado.
+    </p>
+  </section>
+
+  <!-- ===== CALCULADORA ===== -->
+  <section class="calculadora">
+    <div class="calc-box">
+      <h2 class="calc-title">Calcule a economia da sua empresa</h2>
+      <p class="calc-desc">Compare o custo do vale-refeição com o Pacote Imperador Corporativo</p>
+      <div class="calc-input-group">
+        <span class="calc-label">Minha empresa tem</span>
+        <input type="number" class="calc-input" id="numFuncionarios" placeholder="10" min="1" max="500" oninput="calcularEconomia()">
+        <span class="calc-label">funcionários</span>
+      </div>
+      <div class="calc-result" id="calcResult">
+        <div class="calc-row">
+          <span>Vale-refeição médio (R$550/mês/func.)</span>
+          <span id="custoVR">-</span>
+        </div>
+        <div class="calc-row">
+          <span>Pacote Imperador Corporativo</span>
+          <span id="custoImperador">-</span>
+        </div>
+        <div class="calc-row economia">
+          <span>💰 Sua empresa economiza por mês</span>
+          <span id="economia">-</span>
+        </div>
+        <div class="calc-row total">
+          <span>💰 Economia anual estimada</span>
+          <span id="economiaAnual">-</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMO FUNCIONA ===== -->
+  <section class="como-funciona">
+    <p class="section-eyebrow">✦ É simples assim</p>
+    <h2 class="section-title">Como funciona o Pacote Corporativo</h2>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-title">Preencha o formulário</div>
+        <p class="step-desc">Informe seus dados e falaremos no WhatsApp em menos de 15 minutos.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-title">Receba a degustação grátis</div>
+        <p class="step-desc">Enviamos marmitas de amostra para você e sua equipe experimentar antes de decidir.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-title">Aprovado? A gente começa</div>
+        <p class="step-desc">Assinamos o contrato. Entregas começam na segunda-feira seguinte.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-title">Cardápio novo toda semana</div>
+        <p class="step-desc">Toda sexta você recebe o cardápio da próxima semana pelo WhatsApp. Sem surpresas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FORMULÁRIO ===== -->
+  <section class="formulario" id="formulario">
+    <div class="form-container">
+      <p class="section-eyebrow">✦ Solicite sua proposta</p>
+      <h2 class="section-title">Comece com uma degustação gratuita</h2>
+      <p class="form-subtitle">Preencha o formulário e nossa especialista Giulia entrará em contato em menos de 15 minutos pelo WhatsApp.</p>
+      <div class="form-box">
+        <form onsubmit="enviarWhatsApp(event)">
+          <div class="form-group">
+            <label class="form-label">Seu nome *</label>
+            <input type="text" class="form-input" id="nome" placeholder="João da Silva" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Nome da empresa *</label>
+            <input type="text" class="form-input" id="empresa" placeholder="Empresa Ltda" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">WhatsApp com DDD *</label>
+            <input type="tel" class="form-input" id="telefone" placeholder="(34) 99999-9999" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Quantos funcionários precisam de almoço? *</label>
+            <select class="form-select" id="funcionarios" required>
+              <option value="">Selecione...</option>
+              <option value="1-4">1 a 4 funcionários</option>
+              <option value="5-9">5 a 9 funcionários (Pacote Essencial)</option>
+              <option value="10-19">10 a 19 funcionários (Pacote Empresarial)</option>
+              <option value="20+">20 ou mais (Pacote Corporativo)</option>
+            </select>
+          </div>
+          <button type="submit" class="form-submit">
+            💬 Quero receber proposta no WhatsApp
+          </button>
+          <p class="form-privacy">🔒 Seus dados estão seguros. Não enviamos spam.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq">
+    <p class="section-eyebrow">✦ Dúvidas frequentes</p>
+    <h2 class="section-title">Perguntas frequentes</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">Tem fidelidade ou contrato longo?</div>
+      <div class="faq-answer">No primeiro mês não há fidelidade: você experimenta sem compromisso. A partir do segundo mês, trabalhamos com contratos mensais renováveis automaticamente, com 15 dias de aviso para cancelamento.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">E se algum funcionário tiver restrição alimentar?</div>
+      <div class="faq-answer">É só avisar nossa equipe pelo WhatsApp. Temos opções sem carne, sem lactose e podemos adaptar o cardápio para necessidades específicas com 3 dias de antecedência.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Como funciona o pagamento?</div>
+      <div class="faq-answer">Emitimos uma única nota fiscal mensal no valor total (número de marmitas × preço do pacote). Pagamento via PIX, boleto ou transferência bancária até o dia 10 de cada mês.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Qual é a área de entrega?</div>
+      <div class="faq-answer">Atendemos todas as regiões de Uberlândia, MG. Para empresas fora do perímetro urbano, consultar condições especiais de entrega.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Posso aumentar ou reduzir o número de marmitas?</div>
+      <div class="faq-answer">Sim! Basta avisar com 24h de antecedência pelo WhatsApp. Para ajustes permanentes (novo funcionário, férias), atualizamos o contrato no ciclo seguinte.</div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="cta-final">
+    <h2>Sua equipe merece comer bem todo dia.</h2>
+    <p>Comece com uma degustação gratuita: sem compromisso, sem custo.</p>
+    <a href="#formulario" class="cta-final-btn">→ Solicitar degustação agora</a>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-logo">👑 O <span>Imperador</span> Delivery</div>
+    <p style="margin-bottom: 12px;">Uberlândia, MG</p>
+    <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 16px;">
+      <a href="http://wa.me/5534984353278" target="_blank" rel="noopener" style="color: var(--dourado); text-decoration: none; font-weight: 600; font-size: 15px;">💬 WhatsApp: (34) 98435-3278</a>
+      <a href="https://www.instagram.com/oimperador.delivery?igsh=YXc1cHg3eWV6Z2Fr&utm_source=qr" target="_blank" rel="noopener" style="color: var(--dourado); text-decoration: none; font-weight: 600; font-size: 15px;">📸 @oimperador.delivery</a>
+      <a href="https://www.ifood.com.br/delivery/uberlandia-mg/o-imperador-saraiva/17402543-562a-46c6-ae28-e1bbfe3c9596?utm_medium=share" target="_blank" rel="noopener" style="color: var(--dourado); text-decoration: none; font-weight: 600; font-size: 15px;">🛵 Ver no iFood</a>
+    </div>
+    <p style="font-size: 12px; color: rgba(254,244,204,0.4);">© 2026 O Imperador Delivery. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    function calcularEconomia() {
+      const n = parseInt(document.getElementById('numFuncionarios').value) || 0;
+      const result = document.getElementById('calcResult');
+
+      if (n < 1) { result.classList.remove('visible'); return; }
+
+      let preco;
+      if (n >= 20) preco = 17.90;
+      else if (n >= 10) preco = 19.90;
+      else if (n >= 5) preco = 21.90;
+      else preco = 23.90; // fora do pacote
+
+      const vrMedio = 550; // R$ vale-refeição médio
+      const custoVR = n * vrMedio;
+      const custoImp = n * preco * 22;
+      const economia = custoVR - custoImp;
+
+      document.getElementById('custoVR').textContent = `R$ ${custoVR.toLocaleString('pt-BR', {minimumFractionDigits:2})}`;
+      document.getElementById('custoImperador').textContent = `R$ ${custoImp.toLocaleString('pt-BR', {minimumFractionDigits:2})}`;
+      document.getElementById('economia').textContent = economia > 0 ? `R$ ${economia.toLocaleString('pt-BR', {minimumFractionDigits:2})}` : 'Consulte pacote especial';
+      document.getElementById('economiaAnual').textContent = economia > 0 ? `R$ ${(economia*12).toLocaleString('pt-BR', {minimumFractionDigits:2})}` : '-';
+
+      result.classList.add('visible');
+    }
+
+    function enviarWhatsApp(e) {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value;
+      const empresa = document.getElementById('empresa').value;
+      const telefone = document.getElementById('telefone').value;
+      const funcionarios = document.getElementById('funcionarios').value;
+
+      const whatsappNum = '5534984353278';
+
+      const msg = encodeURIComponent(
+        `Olá! Me chamo ${nome}, da empresa ${empresa}.\n` +
+        `Vi a landing page do Pacote Corporativo e tenho interesse!\n` +
+        `Precisamos de almoço para: ${funcionarios} funcionários.\n` +
+        `Meu WhatsApp: ${telefone}\n\n` +
+        `Pode me enviar mais informações e a proposta?`
+      );
+
+      window.open(`https://wa.me/${whatsappNum}?text=${msg}`, '_blank');
+    }
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
